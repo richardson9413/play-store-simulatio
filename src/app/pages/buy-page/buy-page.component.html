@@ -1,0 +1,64 @@
+<div class="buy-page_container">
+  <div class="image_container">
+   <img [src]="game.carCover">
+  </div>
+   <div class="description_container">
+  <div class="title_container">
+        {{game.name}}
+    </div>
+        <div class="price_container">
+          <h1>R${{game.gamePrice}}</h1>
+        </div>
+      </div>
+</div>
+ <div class="card_container">
+  <div class="payment-selector_container">
+    <label>
+      <input type="radio" name="paymentMethod" value="pix" [(ngModel)]="selectedPaymentMethod">
+      Pix
+    </label>
+    <label>
+      <input type="radio" name="paymentMethod" value="card" [(ngModel)]="selectedPaymentMethod">
+      Cartão de Crédito
+    </label>
+    <div class="buy-form_container">
+      <!-- Formulário de cartão de crédito -->
+      <div class="card-form_container" *ngIf="selectedPaymentMethod === 'card'">
+        <h3>Pagamento com Cartão de Crédito</h3>
+        <label>Número do Cartão:
+          <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+        </label>
+        <label>Data de Expiração:
+          <input type="text" placeholder="MM/AA">
+        </label>
+        <label>CVV:
+          <input type="text" placeholder="XXX">
+        </label>
+        <label>Número de Parcelas:
+          <select [(ngModel)]="selectedInstallment" (ngModelChange)="calculateInstallment()">
+            <option *ngFor="let installment of installments" [value]="installment">{{ installment }}x</option>
+          </select>
+        </label>
+        <div *ngIf="selectedInstallment > 1">
+          <p>Valor da Parcela: {{ installmentValue | currency }}</p>
+          <p>Total com Juros: {{ totalWithInterest | currency }}</p>
+        </div>
+
+        <div *ngIf="selectedInstallment === 1">
+          <p>Pagamento à vista, sem juros: {{ game.gamePrice| currency }}</p>
+        </div>
+        <div class="buy-button">
+          <button>Comprar</button>
+        </div>
+      </div>
+          <!-- Formulário de pagamento por Pix -->
+    <div class="pix-form_container" *ngIf="selectedPaymentMethod === 'pix'">
+      <h3>Pagamento via Pix</h3>
+      <p>Use o QR code ou copie a chave Pix para realizar o pagamento.</p>
+      <img src="assets\Untitled (1).png" alt="QR Code para pagamento Pix">
+      <p>Chave Pix: qr.codes/lxdI0P</p>
+    </div>
+  </div>
+</div>
+  </div>
+

@@ -1,0 +1,29 @@
+.small-card_container{
+  border: solid 3px rgba(128, 128, 128, 0.713);
+  width: 200px;
+  height: 86px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: row;
+}
+.smallcard_img{
+  width: 50px;
+  height: 80;
+  box-sizing: border-box;
+}
+.smallcard_img > img{
+  width: 50px;
+  height: 80px;
+}
+.descriptin_container{
+  width: 150px;
+  height: 80px;
+  background-color: black;
+}
+.descriptin_title > button{
+  background-color: black;
+  color: antiquewhite;
+}
+.descripition_value{
+  margin-left: 90px;
+}

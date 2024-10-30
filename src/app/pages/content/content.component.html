@@ -1,0 +1,56 @@
+<div class="content_container">
+<div class="titel_container">
+      <h1>{{game.name}}</h1>
+</div >
+<div class="card_container">
+  <div class="img_container">
+  <img [src]="game.carCover" >
+  <div class="decription_container">
+    <p>
+      {{game.description}}
+    </p>
+</div>
+  </div>
+
+     <div class="card_price">
+      <div class="card_value">
+                 <div class="card_value-des">Valor</div>
+                 <div class="card_value-pre">{{game.gamePrice}}</div>
+          </div>
+            <div class="button_shop">
+              <button>Adicionar ao carrinho</button>
+           </div>
+            <div class="button_buy">
+                      <button (click)="goToBuayPage(game.id)">Comprar</button>
+            </div>
+              <div class="card_info">
+                <div class="card_dev">
+                  <h2>Desenvolvedor</h2>
+                  <p class="card_dev-p">Ubisoft</p>
+                </div>
+                <div class="card_plat">
+                   <h3>Plataforma</h3>
+                   <p>Windows</p>
+                 </div>
+                <div class="card_age">
+                    <h4>Idade recomendada</h4>
+                    <p>16</p>
+                </div>
+                <div class="card_lauch">
+                  <h5>Lançamento</h5>
+                    <p>20/10/2015</p>
+                </div>
+                <div></div>
+              </div>
+
+  </div>
+  <div class="small-card_container">
+     <div  *ngFor=" let s of gameSmall">
+      <app-small-card
+       [smallGame]="s"
+       (gameSelected)="onGameSlected($event)"
+      ></app-small-card>
+    </div>
+     </div>
+  </div>
+</div>z

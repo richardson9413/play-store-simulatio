@@ -1,0 +1,29 @@
+<div class="add-game_container">
+  <h2>Adicionar novo jogo</h2>
+    <form (ngSubmit)="addGame()">
+        <label >Nome do jogo
+            <input type="text" [(ngModel)] ="newGame.name" name = "name" required>
+        </label>
+        <label >Descrição
+            <textarea [(ngModel)]="newGame.description" name="description" required></textarea>
+        </label>
+        <label >Preço
+            <input type="text" [(ngModel)]="newGame.gamePrice" name="Price" required>
+        </label>
+        <label >Url da imagem
+            <input type="text" [(ngModel)]="newGame.carCover" name="imageUrl" required>
+        </label>
+        <label >Tipo
+            <input type="text" [(ngModel)]="newGame.gametype"  name="gametype">
+        </label>
+        <label > Rotulo
+            <input type="text" [(ngModel)]="newGame.gameLabel" name="gameLabel" required>
+        </label>
+        <button class="submit_button"   type="submit">
+                Adicionar jogo
+        </button>
+        <div *ngIf="message" class="message_container">
+            {{message}}
+        </div>
+    </form>
+</div>

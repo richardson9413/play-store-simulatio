@@ -1,0 +1,58 @@
+.buy-page_container{
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.image_container{
+  margin-top: 45px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.image_container > img{
+  width: 50px;
+}
+.description_container{
+  margin-top: 45px;
+}
+.title_container{
+  color: antiquewhite;
+  font-size: 20px;
+}
+.price_container{
+  color: antiquewhite;
+  font-size: 10px;
+}
+.card_container{
+  color: antiquewhite;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+.card-form_container{
+  display: flex;
+  flex-direction: column;
+}
+.pix-form_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pix-form_container > img{
+  width: 100px;
+  height: 100px;
+  margin-left: 120px;
+}
+.buy-button{
+  display: flex;
+  align-items: center;
+  margin-left: 180px;
+}
+.buy-button > button{
+  width: 140px;
+  border-radius: 5px;
+}
+.buy-button > button:active{
+  position: relative;
+  top: 2px;
+}

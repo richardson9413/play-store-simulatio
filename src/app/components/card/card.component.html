@@ -1,0 +1,14 @@
+<a [routerLink]="['content', game.id]" class="card__container"
+>
+  <img
+  class="card__img"
+  [src]= "game.carCover"
+  alt=""
+  >
+  <app-card-label
+  [gameLabel] = "game"
+  ></app-card-label>
+  <app-card-pricing
+  [gameType]="game"
+  ></app-card-pricing>
+</a>

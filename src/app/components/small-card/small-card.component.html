@@ -1,0 +1,15 @@
+<div class="small-card_container" >
+  <div class="smallcard_img">
+    <img [src]="smallGame.carCover" alt="">
+  </div>
+  <div class="descriptin_container">
+        <div class="descriptin_title">
+         <button (click)="ActionSmall()">
+          <span>{{smallGame.name}}</span>
+         </button>
+
+        </div>
+        <div class="descripition_value"> {{smallGame.gamePrice}}</div>
+  </div>
+
+</div>

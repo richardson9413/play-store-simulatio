@@ -1,0 +1,44 @@
+.add-game_container{
+width: 100%;
+max-width: 600px;
+margin: 0;
+margin-left: 20%;
+height: 100%;
+max-height: 600px;
+}
+.add-game_container > h2{
+ margin-left: 30%;
+margin-top: 5px;
+color: antiquewhite;
+}
+.add-game_container label {
+  display: block;
+  margin-bottom: 10px; /* espaço entre os itens */
+  border-radius: 5px;
+  color: antiquewhite;
+}
+.add-game_container input,
+.add-game_container textarea {
+  width: 100%; /* faz com que o input ocupe toda a largura do container */
+  padding: 10px;
+  box-sizing: border-box; /* garante que o padding não ultrapasse a largura */
+  margin-top: 5px; /* espaço entre o label e o campo */
+  border-radius: 5px;
+  background-color: rgba(0, 38, 255, 0.3);
+  color: antiquewhite;
+}
+.submit_button{
+ margin-left: 40%;
+ width: 150px;
+ border-radius: 5px;
+}
+.submit_button:active{
+ position: relative;
+ top: 2px;
+}
+.message_container{
+  margin-top: 5px;
+  margin-left: 35%;
+  color: antiquewhite;
+
+}
